@@ -5,11 +5,25 @@
 body {
     background-color: #EDD263;
 }
+header{
+    padding: 10px 0;
+}
+.pages li a{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
 #inputValue {
     padding: 15px;
 }
 .submit {
     padding: 15px 30px;
+    background-color: #440083;
+    color: #ffffff;
+}
+.submit:hover {
+    background-color: #440083;
+    color: #ffffff;
 }
 #mealsDiv {
     display: grid;
