@@ -5,6 +5,12 @@
 body {
     background-color: #EDD263;
 }
+#inputValue {
+    padding: 15px;
+}
+.submit {
+    padding: 15px 30px;
+}
 #mealsDiv {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -21,5 +27,19 @@ body {
     border-top-left-radius: 20px;
 }
 .mealName {
-    margin-top: 5px;
+    margin-top: 5px 0;
+}
+#mealDetailArea {
+    width: 35%;
+    background: #ffffff;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+#mealDetailArea img{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.ingredientList {
+    padding: 10px;
 }
