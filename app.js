@@ -1,4 +1,4 @@
-// Get Data form server //
+// Get Data from server //
 const searchMeal = () => {
     const inputValue = document.getElementById('inputValue').value;
     if (inputValue === '') {
