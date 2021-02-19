@@ -25,7 +25,7 @@ const mealsData = meal => {
         const mealInfo = `
         <div onclick="getDetail('${eachMeal.strMeal}')">
             <img src="${eachMeal.strMealThumb}">
-            <h2 class="mealName">${eachMeal.strMeal}</h2>
+            <h2 class="mealName my-3">${eachMeal.strMeal}</h2>
         </div>
         `
         div.innerHTML = mealInfo;
@@ -41,23 +41,25 @@ const getDetail = (mealName) => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
     fetch(url)
         .then(res => res.json())
-        .then(data => eachMealDetail(data))
+        .then(data => eachMealDetail(data.meals[0]))
 }
 
 
 // Get each meal ingredientList and others //
 const eachMealDetail = eachMeal => {
+    const strIngredient = [];
+    for (let i = 1; i <= 20 ; i++) {
+        if(eachMeal[`strIngredient${i}`]){
+            strIngredient.push(`${eachMeal[`strIngredient${i}`]}`);
+        }
+    }
     const mealDetailArea = document.getElementById('mealDetailArea');
     mealDetailArea.innerHTML = `
-    <img src="${eachMeal.meals[0].strMealThumb}">
+    <img src="${eachMeal.strMealThumb}">
     <div class="ingredientList">
-        <h2 class="mealName">${eachMeal.meals[0].strMeal}</h2>
+        <h2 class="mealName my-3">${eachMeal.strMeal}</h2>
         <ul>
-            <li>${eachMeal.meals[0].strIngredient1}</li>
-            <li>${eachMeal.meals[0].strIngredient2}</li>
-            <li>${eachMeal.meals[0].strIngredient3}</li>
-            <li>${eachMeal.meals[0].strIngredient4}</li>
-            <li>${eachMeal.meals[0].strIngredient5}</li>
+            ${strIngredient.map(ingredient =>`<li>${ingredient}</li>`).join(' ')}
         </ul>
     </div>
     `

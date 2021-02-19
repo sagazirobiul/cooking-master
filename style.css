@@ -33,26 +33,23 @@ header{
 .mealPack {
     text-align: center;
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .mealPack img{
     width: 100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-.mealName {
-    margin-top: 5px 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 #mealDetailArea {
-    width: 35%;
+    width: 400px;
     background: #ffffff;
-    margin: 0 auto;
-    border-radius: 20px;
+    margin: 0 auto 30px;
+    border-radius: 10px;
 }
 #mealDetailArea img{
     width: 100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .ingredientList {
     padding: 10px;
